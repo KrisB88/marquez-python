@@ -41,7 +41,7 @@ class FileBackend(Backend):
 
         log.info(put_details)
 
-        self.sync_file(put_details)
+        self._sync_file(put_details)
 
     def post(self, path, headers, json=None):
         log.debug("_post()")
@@ -55,9 +55,9 @@ class FileBackend(Backend):
 
         log.info(post_details)
 
-        self.sync_file(post_details)
+        self._sync_file(post_details)
 
-    def sync_file(self, json_data):
+    def _sync_file(self, json_data):
         self._file.write(json.dumps(json_data))
         self._file.write(os.linesep)
         self._file.flush()
