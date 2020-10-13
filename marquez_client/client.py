@@ -333,7 +333,7 @@ class MarquezClient(object):
         post_details['http_method'] = 'POST'
         post_details['http_headers'] = _HEADERS
         post_details['payload'] = payload
-        post_details['duration_ms'] = (self._now_ms() - now_ms)
+        post_details['duration_ms'] = (Utils.now_ms() - now_ms)
 
         log.info(post_details)
 
@@ -350,7 +350,7 @@ class MarquezClient(object):
         put_details['http_method'] = 'POST'
         put_details['http_headers'] = _HEADERS
         put_details['payload'] = payload
-        put_details['duration_ms'] = (self._now_ms() - now_ms)
+        put_details['duration_ms'] = (Utils.now_ms() - now_ms)
 
         log.info(put_details)
 
@@ -367,7 +367,7 @@ class MarquezClient(object):
         get_details['http_method'] = 'POST'
         get_details['http_headers'] = _HEADERS
         get_details['payload'] = params
-        get_details['duration_ms'] = (self._now_ms() - now_ms)
+        get_details['duration_ms'] = (Utils.now_ms() - now_ms)
 
         log.info(get_details)
 
